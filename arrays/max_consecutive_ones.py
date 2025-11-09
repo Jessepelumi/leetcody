@@ -7,11 +7,11 @@ The highest value of 'count' should be stored in 'max_count' and returned.
 The value of 'max_count' is the maximum number of consecutive 1s.
 """
 
-def max_consecutive_ones(arr: list[int]) -> int:
+def max_consecutive_ones(nums: list[int]) -> int:
     count = 0
     max_count = 0
 
-    for i in arr:
+    for i in nums:
         if i == 1:
             count += 1
         else:
