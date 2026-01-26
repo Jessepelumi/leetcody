@@ -1,1 +1,1 @@
-This repository contains my solutions to leetcode problems. 
+A collection of my LeetCode problem solutions written in Python, focused on data structures and algorithms practice.
