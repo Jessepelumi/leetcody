@@ -31,16 +31,15 @@ When the value of x is known, y can be found by subtracting x from target -> tar
 """
 
 def two_sum(nums: list, target: int) -> list:
-    complement = {}
+    seen = {}
 
     for i, num in enumerate(nums):
-        result = target - num
-        complement[result] = i 
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        
+        seen[num] = i
 
-        # if result in complement:
-        #     return [complement[num], i]
-
-    return complement
 
 # Usage
 nums = [2,7,11,15]
