@@ -34,11 +34,18 @@ def two_sum(nums: list, target: int) -> list:
     seen = {}
 
     for i, num in enumerate(nums):
+        # obtain the complement
         complement = target - num
+
+        # check if that complement has been seen and return it
         if complement in seen:
             return [seen[complement], i]
         
+        # if the complement doesn't exist, add the num to the seen dict
         seen[num] = i
+
+    # time complexity -> O(n)
+    # space complexity -> O(n)
 
 
 # Usage
