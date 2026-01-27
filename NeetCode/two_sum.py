@@ -28,6 +28,7 @@ When the value of x is known, y can be found by subtracting x from target -> tar
 - Return the indices of x and y
 
 - To have access to and store indices, use enumerate instead of range.
+- Use a dict to store each element of the array and the corresponding index.
 """
 
 def two_sum(nums: list, target: int) -> list:
