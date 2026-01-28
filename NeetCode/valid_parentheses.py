@@ -38,33 +38,57 @@ My solution:
 """
 
 def valid_parentheses(s: str) -> bool:
+    # check if the length of s is even
+    if len(s) % 2 != 0:
+        return False
+    
     stack = []
+    pairs = {")":"(", "]":"[", "}":"{"}
 
-    # check if length of s is even
-    if len(s) % 2 != 0: return False
-
-    for _, bracket in enumerate(s):
-        if bracket == "(" or bracket == "[" or bracket == "{":
+    for bracket in s:
+        if bracket in pairs.values():
             stack.append(bracket)
-        elif bracket == ")":
-            if len(stack) == 0: return False
-            result = stack.pop()
-            if result != "(": return False
-        elif bracket == "]":
-            if len(stack) == 0: return False
-            result = stack.pop()
-            if result != "[": return False
-        elif bracket == "}":
-            if len(stack) == 0: return False
-            result = stack.pop()
-            if result != "{": return False
-
-    if len(stack) != 0: return False
-
+        elif bracket in pairs:
+            if not stack:
+                return False
+            
+            pop_val = stack.pop()
+            if pop_val != pairs[bracket]:
+                return False
+            
+    if len(stack) != 0:
+        return False
+    
     return True
-
-
 
 # Usage
 s = "(("
 print(valid_parentheses(s))
+
+
+# my brute-force solution
+# def valid_parentheses(s: str) -> bool:
+#     stack = []
+
+#     # check if length of s is even
+#     if len(s) % 2 != 0: return False
+
+#     for _, bracket in enumerate(s):
+#         if bracket == "(" or bracket == "[" or bracket == "{":
+#             stack.append(bracket)
+#         elif bracket == ")":
+#             if len(stack) == 0: return False
+#             result = stack.pop()
+#             if result != "(": return False
+#         elif bracket == "]":
+#             if len(stack) == 0: return False
+#             result = stack.pop()
+#             if result != "[": return False
+#         elif bracket == "}":
+#             if len(stack) == 0: return False
+#             result = stack.pop()
+#             if result != "{": return False
+
+#     if len(stack) != 0: return False
+
+#     return True
