@@ -61,6 +61,9 @@ def valid_parentheses(s: str) -> bool:
     
     return True
 
+# time complexity -> O(n)
+# space complexity -> O(n)
+
 # Usage
 s = "(("
 print(valid_parentheses(s))
