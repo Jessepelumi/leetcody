@@ -23,3 +23,28 @@ Explanation: The array represents the integer 9.
 Incrementing by one gives 9 + 1 = 10.
 Thus, the result should be [1,0].
 """
+
+"""
+My solution:
+
+- Convert the elements of the array to a string using the join statement
+- Then do a type conversion to an integer and increment
+- Type convert to a string again and put into an array. 
+NOTE: This solution works but it is not what the problem requires, because the given integer is a LARGE integer.
+
+- Loop through digits backwards 
+- Check if the last digit is less than 9, if it is, increment by 1
+"""
+
+def plusOne(digits: list) -> list:
+    for i in range(len(digits) - 1, -1, -1):
+        # check if last digit is less that 9
+        if digits[i] < 9:
+            digits[i] += 1
+            return digits
+        else:
+            pass
+
+# Usage
+digits = [1, 2, 3, 4, 5]
+print(plusOne(digits))
