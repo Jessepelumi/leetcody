@@ -26,3 +26,45 @@ Example 5:
 Input: s = "([)]"
 Output: false
 """
+
+"""
+My solution:
+
+- Ensure the lenght of s is even
+- Keep track of all opening brackets using a stack 
+- The most recent opening bracket must match the most recent closing bracket
+- No closing bracket must be encountered while the stack is empty
+- After processing the entire string, the stack must be empty
+"""
+
+def valid_parentheses(s: str) -> bool:
+    stack = []
+
+    # check if length of s is even
+    if len(s) % 2 != 0: return False
+
+    for _, bracket in enumerate(s):
+        if bracket == "(" or bracket == "[" or bracket == "{":
+            stack.append(bracket)
+        elif bracket == ")":
+            if len(stack) == 0: return False
+            result = stack.pop()
+            if result != "(": return False
+        elif bracket == "]":
+            if len(stack) == 0: return False
+            result = stack.pop()
+            if result != "[": return False
+        elif bracket == "}":
+            if len(stack) == 0: return False
+            result = stack.pop()
+            if result != "{": return False
+
+    if len(stack) != 0: return False
+
+    return True
+
+
+
+# Usage
+s = "(("
+print(valid_parentheses(s))
