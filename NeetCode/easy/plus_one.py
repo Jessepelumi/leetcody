@@ -38,7 +38,7 @@ NOTE: This solution works but it is not what the problem requires, because the g
 
 def plusOne(digits: list) -> list:
     for i in range(len(digits) - 1, -1, -1):
-        # check if last digit is less that 9
+        # check if the last digit is less than 9
         if digits[i] < 9:
             digits[i] += 1
             return digits
