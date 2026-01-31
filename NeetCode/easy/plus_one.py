@@ -43,8 +43,14 @@ def plusOne(digits: list) -> list:
             digits[i] += 1
             return digits
         else:
-            pass
+            digits[i] = 0
+            if i == 0:
+                digits.insert(0, 1)
+                return digits
+            
+    # time complexity -> O(n^2)
+    # space complexity -> O(1)
 
 # Usage
-digits = [1, 2, 3, 4, 5]
+digits = [9, 9, 9, 9, 9, 9]
 print(plusOne(digits))
