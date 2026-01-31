@@ -34,23 +34,38 @@ NOTE: This solution works but it is not what the problem requires, because the g
 
 - Loop through digits backwards 
 - Check if the last digit is less than 9, if it is, increment by 1
+- If the last digit is 9, set it to 0
+- Do that for all elemets in the loop, if all elements are 9s, return [1] + digits which is now a list of 0s
 """
-
 def plusOne(digits: list) -> list:
     for i in range(len(digits) - 1, -1, -1):
-        # check if the last digit is less than 9
+        # check if digit is less than 9
         if digits[i] < 9:
             digits[i] += 1
             return digits
         else:
             digits[i] = 0
-            if i == 0:
-                digits.insert(0, 1)
-                return digits
+
+    return [1] + digits
+
+# time complexity -> O(n)
+# space complexity -> O(1)
+
+# def plusOne(digits: list) -> list:
+#     for i in range(len(digits) - 1, -1, -1):
+#         # check if the last digit is less than 9
+#         if digits[i] < 9:
+#             digits[i] += 1
+#             return digits
+#         else:
+#             digits[i] = 0
+#             if i == 0:
+#                 digits.insert(0, 1)
+#                 return digits
             
-    # time complexity -> O(n^2)
-    # space complexity -> O(1)
+#     # time complexity -> O(n^2)
+#     # space complexity -> O(1)
 
 # Usage
-digits = [9, 9, 9, 9, 9, 9]
+digits = [9]
 print(plusOne(digits))
