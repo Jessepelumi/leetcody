@@ -59,14 +59,15 @@ def climbingStairs(n: int) -> int:
     # dict for memoization
     memo = {}
 
+    # helper recursive function
     def dp(k):
         if k in memo:
-            return memo[k]
+            return memo[k] # use cached values
         
         if k in [1,2]:
             return k
         else:
-            memo[k] = dp(k-1) + dp(k-2)
+            memo[k] = dp(k-1) + dp(k-2) # recursive calculation with memo
             return memo[k]
         
     return dp(n)
