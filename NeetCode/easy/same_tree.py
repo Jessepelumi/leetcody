@@ -54,3 +54,6 @@ class Solution:
         
         # traverse the tree
         return self.isSame(p.left, q.left) and self.isSame(p.right, q.right)
+    
+    # time complexity -> O(n+m) if each node is visited once. If trees are the same size, O(n)
+    # space complexity -> balanced tree: O(log n). Skewed: O(n)
