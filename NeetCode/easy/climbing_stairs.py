@@ -48,3 +48,29 @@ def climbing_stairs(n: int) -> int:
         return climbing_stairs(n - 1) + climbing_stairs(n - 2) # recursive formula
     # time complexity -> O(2^n) -> this follows O(branch^n)
     # space complexity -> O(n)
+
+
+"""
+This solution can be optimized using Dynamic Programming -> a top-down (memoization) approach.
+Use a dictionary "memo" to store computed values, instead of reusing functions.
+"""
+
+def climbingStairs(n: int) -> int:
+    # dict for memoization
+    memo = {}
+
+    def dp(k):
+        if k in memo:
+            return memo[k]
+        
+        if k in [1,2]:
+            return k
+        else:
+            memo[k] = dp(k-1) + dp(k-2)
+            return memo[k]
+        
+    return dp(n)
+
+print(f"Recusrion: {climbing_stairs(5)}")
+print(f"DP: {climbingStairs(5)}")
+
