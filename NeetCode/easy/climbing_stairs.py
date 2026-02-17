@@ -46,3 +46,5 @@ def climbing_stairs(n: int) -> int:
         return 2
     else:
         return climbing_stairs(n - 1) + climbing_stairs(n - 2) # recursive formula
+    # time complexity -> O(2^n) -> this follows O(branch^n)
+    # space complexity -> O(n)
