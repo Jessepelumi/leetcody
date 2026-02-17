@@ -21,5 +21,28 @@ Constraints:
 1 <= n <= 45
 """
 
+"""
+My solution:
+
+Identify the sequence of steps:
+From the example, ways(1) = 1 and ways(3) = 3.
+For when n is 2: ways(2) = 2.
+For when n is 4: ways(4) = 5
+Sequence so far -> 1, 2, 3, 5.
+
+Identified formula:
+ways(3) = ways(2) + ways(1)
+ways(4) = ways(3) + ways(2)
+Then, ways(n) = ways(n - 1) + ways(n - 2) (Recursive formula)
+
+This problem can then be solved recursively. 
+"""
+
 def climbing_stairs(n: int) -> int:
-    pass
+    # base case
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        return climbing_stairs(n - 1) + climbing_stairs(n - 2) # recursive formula
