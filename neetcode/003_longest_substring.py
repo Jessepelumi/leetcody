@@ -19,7 +19,9 @@ class Solution:
             seen.add(s[right])
 
         return max_window
-            
+    
+# Time complexity: O(n)
+# Space complexity: O(n)
 
 
 solution = Solution
