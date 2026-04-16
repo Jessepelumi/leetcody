@@ -7,7 +7,7 @@ class ListNode:
         self.next = next
 
 class Solution:
-    def add_two_numbers(l1: ListNode, l2: ListNode) -> ListNode:
+    def add_two_numbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = ListNode(0) # placeholder
         current = dummy
         p1 = l1
