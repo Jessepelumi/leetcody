@@ -8,7 +8,7 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def good_node(root: TreeNode) -> int:
+    def good_node(self, root: TreeNode) -> int:
         def dfs(node: TreeNode, max_val):
             if not node:
                 return 0
@@ -19,5 +19,8 @@ class Solution:
             # Add all the good nodes
             return is_good + dfs(node.left, new_max) + dfs(node.right, new_max)
             
-        return dfs(root, root.val)
+        return dfs(root, float('-inf')) # '-inf' is negative infinity
+    
+# Time complexity: O(n)
+# Space complexity O(n)
 
