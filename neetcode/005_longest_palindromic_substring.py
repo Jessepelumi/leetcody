@@ -2,7 +2,7 @@
 # Difficulty: Medium
 
 class Solution:
-    def longest_palindrome(s: str) -> str:
+    def longest_palindrome(self, s: str) -> str:
         # Find the center and expand
         # Odd center -> (i, i)
         # Even center -> (i, i + 1)
@@ -34,7 +34,7 @@ class Solution:
 # Time complexity: O(n^2)
 # Space complexity: O(1)
     
-solution = Solution
+solution = Solution()
 s = "babad"
 result = solution.longest_palindrome(s)
 print(result)
