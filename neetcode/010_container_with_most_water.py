@@ -2,7 +2,7 @@
 # Difficulty: Medium
 
 class Solution:
-    def container_most_water(height: list[int]) -> int:
+    def container_most_water(self, height: list[int]) -> int:
         left = 0
         right = len(height) - 1
         max_water = 0
@@ -23,7 +23,7 @@ class Solution:
 # Time complexity: O(n)
 # Space complexity: O(1)
 
-solution = Solution
+solution = Solution()
 height = [1,8,6,2,5,4,8,3,7]
 result = solution.container_most_water(height)
 print(result)
