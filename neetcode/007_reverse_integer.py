@@ -2,7 +2,7 @@
 # Difficulty: Medium
 
 class Solution:
-    def reverse_integer(x: int) -> int:
+    def reverse_integer(self, x: int) -> int:
         INT_MAX = 2**31 - 1
 
         sign  = -1 if x < 0 else 1
@@ -24,9 +24,12 @@ class Solution:
             result = (result * 10) + pop
 
         return result * sign
+    
+# Time complexity: O(log n) -> as a result of x // 10
+# Space complexity: O(1)
 
 
-solution = Solution
+solution = Solution()
 x = -231
 result = solution.reverse_integer(x)
 print(result)
