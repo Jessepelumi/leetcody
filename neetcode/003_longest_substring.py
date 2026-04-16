@@ -4,7 +4,7 @@
 # Sliding window problem
 
 class Solution:
-    def longest_substring(s: str) -> int:
+    def longest_substring(self, s: str) -> int:
         seen = set()
         max_window = 0
         left = 0
@@ -24,7 +24,8 @@ class Solution:
 # Space complexity: O(n)
 
 
-solution = Solution
+solution = Solution()
+
 s = "abcabcbb"
 result = solution.longest_substring(s)
 print(result)
