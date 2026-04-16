@@ -2,7 +2,7 @@
 # Difficulty: Easy
 
 class Solution:
-    def two_sum(nums: list[int], target: int) -> list[int]:
+    def two_sum(self, nums: list[int], target: int) -> list[int]:
         seen = {}
 
         for index, value in enumerate(nums):
@@ -17,7 +17,8 @@ class Solution:
 # Space complexity: O(n)
 
 
-solution = Solution
+solution = Solution()
+
 nums = [11, 21, 31, -41]
 target = -30
 result = solution.two_sum(nums, target)
