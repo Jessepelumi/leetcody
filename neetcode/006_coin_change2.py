@@ -1,4 +1,4 @@
-# Problem: 6. Coin Change II
+# Problem: 518. Coin Change II
 # Difficulty: Medium
 
 # Dynamic Programming Problem
