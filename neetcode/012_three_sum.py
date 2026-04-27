@@ -4,7 +4,7 @@
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
         result = []
-        nums.sort() # -> O(n log n)
+        nums.sort() # O(n log n) operation
 
         for i in range(len(nums)):
             if nums[i] > 0:
@@ -13,20 +13,27 @@ class Solution:
             if i > 0 and nums[i] == nums[i-1]:
                 continue
 
-            # Two pointers
-            left, right = i + 1, len(nums) - 1
+            # define two pointers
+            l, r = i + 1, len(nums) - 1
 
-            while left < right:
-                three_sum = nums[i] + nums[left] + nums[right]
+            while l < r:
+                target = nums[i] + nums[l] + nums[r]
 
-                if three_sum < 0:
-                    left += 1
-                elif three_sum > 0:
-                    right -= 1
-                else:
-                    result.append([nums[i], nums[left], nums[right]])
+                if target < 0:
+                    l += 1
+                elif target > 0:
+                    r -= 1
+                elif target == 0:
+                    result.append([nums[i], nums[l], nums[r]])
+                    l += 1
+                    r -= 1
 
-                    
+                    while l < r and nums[l] == nums[l-1]:
+                        l += 1
+                    while l < r and nums[r] == nums[r+1]:
+                        r -= 1
+
+        return result
 
 
 
