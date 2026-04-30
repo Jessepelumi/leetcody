@@ -27,4 +27,6 @@ class Solution:
                 p2 = p2.next
 
         return dummy.next
-    
+
+# time complexity: O(n)
+# space complexity: O(n)    
