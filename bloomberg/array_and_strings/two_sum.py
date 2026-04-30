@@ -9,3 +9,6 @@ class Solution:
                 return [seen[comp], i]
             
             seen[v] = i
+
+# time complexity: O(n)
+# space complexity: O(n)
