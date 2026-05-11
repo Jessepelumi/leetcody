@@ -1,5 +1,5 @@
 class Solution:
-    def mergeSortedArray(self, nums1: list[int], m: int, nums2: list[int], n: int) -> list[int]:
+    def mergeSortedArray(self, nums1: list[int], m: int, nums2: list[int], n: int):
         p1 = m - 1
         p2 = n - 1
         p = m + n - 1
@@ -18,6 +18,3 @@ class Solution:
             nums1[p] = nums2[p2]
             p2 -= 1
             p -= 1
-
-        return nums1
-
