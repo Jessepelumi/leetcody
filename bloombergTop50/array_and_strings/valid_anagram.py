@@ -9,7 +9,7 @@ class Solution():
             freq[char] = freq.get(char, 0) + 1
 
         for char in t:
-            if char not in freq and freq[char] == 0:
+            if char not in freq or freq[char] == 0:
                 return False
 
             freq[char] -= 1
