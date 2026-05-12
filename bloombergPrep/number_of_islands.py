@@ -30,3 +30,5 @@ class Solution:
                     dfs(r, c)
 
         return island_count
+    
+    # Time & space complexity: O(m * n)
