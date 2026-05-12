@@ -1,6 +1,6 @@
 """
 Linked List, Recursion
-LeetCode Easy
+Bloomberg Easy
 """
 
 class ListNode:
