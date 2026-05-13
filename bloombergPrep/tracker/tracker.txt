@@ -8,5 +8,6 @@ Medium
 1. Longest Substring Without Repeating Characters
 2. Decode String
 3. Invalid Transactions
+4. Four Sum
 
 Hard
