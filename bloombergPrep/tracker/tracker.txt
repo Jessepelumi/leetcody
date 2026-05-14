@@ -3,7 +3,7 @@ Easy
 2. Valid Anagram
 3. Merge Sorted Array
 4. Merge Two Sorted Lists
-5. Valid Parentheses
+5. Valid Parenthese
 
 Medium 
 1. Longest Substring Without Repeating Characters
