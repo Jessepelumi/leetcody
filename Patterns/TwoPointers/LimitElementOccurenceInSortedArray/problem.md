@@ -16,26 +16,26 @@ The solution must operate directly on the input array without allocating a separ
 ```
 Input: nums = [1,1,1,2,2,3]
 Output: k = 5, nums = [1,1,2,2,3,_]
+```
 
 Explanation:
 The function returns k = 5. The first five positions contain [1,1,2,2,3]. The element '1' appeared three times originally but now appears only twice. The underscore represents a value that doesn't matter and won't be checked.
-```
 
 ```
 Input: nums = [0,0,1,1,1,1,2,3,3]
 Output: k = 7, nums = [0,0,1,1,2,3,3,_,_]
+```
 
 Explanation:
 The function returns k = 7. The first seven positions contain [0,0,1,1,2,3,3]. The value '1' originally appeared four times but is now limited to two occurrences. The two underscores represent irrelevant values.
-```
 
 ```
 Input: nums = [1,1,2,2,3,3]
 Output: k = 6, nums = [1,1,2,2,3,3]
+```
 
 Explanation:
 The function returns k = 6. Since no element appears more than twice, the array remains unchanged. All six elements are valid in the output.
-```
 
 #### Constraints
 
