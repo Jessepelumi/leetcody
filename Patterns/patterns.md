@@ -2,5 +2,5 @@
 
 ### Day 1: Two Pointers
 
-1. [Limit Element Occurences in Sorted Array](https://www.onenoughtone.com/learning-path/data-structures-algorithms-patterns/problem/limit-element-occurrences)
+1. Limit Element Occurences in Sorted Array - [Problem Link](https://www.onenoughtone.com/learning-path/data-structures-algorithms-patterns/problem/limit-element-occurrences) | [Solution Link](Patterns/TwoPointers/limit_element_occurences_in_sorted_array.py)
 
