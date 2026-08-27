@@ -20,7 +20,7 @@ Algorithm:
 """
 
 class Solution:
-    def limit_occurences(self, nums: list) -> int:
+    def limit_occurences(self, nums: list[int]) -> int:
         write = 0
         count = 0
         previous = None
