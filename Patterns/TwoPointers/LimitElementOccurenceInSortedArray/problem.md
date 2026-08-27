@@ -1,6 +1,6 @@
 ## Limit Element Occurrences in Sorted Array
 
-##### Pattern: Read and Write
+#### Pattern: Read and Write
 
 You are given an integer array `nums` arranged in **non-decreasing order**. Your task is to modify the array **in-place** so that each unique value appears at most twice, while preserving the original relative ordering of elements.
 
