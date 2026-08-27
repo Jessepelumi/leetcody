@@ -1,5 +1,7 @@
 ## Maximum Water Container
 
+##### Pattern: Converging Pointers
+
 You are given an integer array called height containing n positive integers. Imagine n vertical barriers placed along the x-axis, where the i-th barrier is positioned at coordinate i and extends from the ground (y = 0) up to height[i].
 
 

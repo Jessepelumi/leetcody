@@ -1,5 +1,7 @@
 ## Relocate Zeroes to End
 
+##### Pattern: Read and Write
+
 You are given an integer array `nums`. Your task is to shift all occurrences of the value `0` to the end of the array while preserving the relative order of all non-zero elements.
 
 
