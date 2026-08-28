@@ -4,7 +4,7 @@
 """
 
 class MultiplePass:
-    def rearrange_array(nums: list[int]) -> list[int]:
+    def tri_value_partition(nums: list[int]) -> list[int]:
         count_zero = 0
         count_one = 0
         count_two = 0
@@ -24,4 +24,4 @@ class MultiplePass:
         for i in range(count_zero + count_one, len(nums)):
             nums[i] = 2
 
-        return nums
+        return nums 
