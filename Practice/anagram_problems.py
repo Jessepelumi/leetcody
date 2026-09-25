@@ -65,8 +65,8 @@ def group_anagrams_v(words: list[str]) -> list[list[str]]:
 
     return result
 
-# result = group_anagrams_v(["eat", "tea", "tan", "ate", "nat", "bat"])
-# print(result)
+result = group_anagrams_v(["eat", "tea", "tan", "ate", "nat", "bat"])
+print(result)
 
 
 """Changes to make anagrams"""
