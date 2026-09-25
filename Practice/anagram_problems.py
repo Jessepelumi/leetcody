@@ -65,5 +65,70 @@ def group_anagrams_v(words: list[str]) -> list[list[str]]:
 
     return result
 
-result = group_anagrams_v(["eat", "tea", "tan", "ate", "nat", "bat"])
-print(result)
+# result = group_anagrams_v(["eat", "tea", "tan", "ate", "nat", "bat"])
+# print(result)
+
+
+"""Changes to make anagrams"""
+"""
+s1 = "bond"
+s2 = "down"
+
+ds = b o n d
+final = bon, bn, b
+"""
+def how_many_changes(s1: str, s2: str) -> int:
+    if len(s1) != len(s2):
+        raise ValueError("The words must be of same length")
+
+    result = []
+
+    for char in s1:
+        result.append(char)
+
+    for char in s2:
+        if char in result:
+            result.remove(char)
+
+    return len(result)
+
+"""
+s1 = bond
+s2 = down
+
+result = {char:count}
+"""
+def how_many_changes_v(s1: str, s2: str) -> int:
+    if len(s1) != len(s2):
+        raise ValueError("The words must be of same length")
+
+    counts = {}
+
+    for char in s1:
+        if char not in counts:
+            counts[char] = 1
+        else:
+            counts[char] += 1
+
+    for char in s2:
+        if char in counts and counts[char] > 0:
+            counts[char] -= 1
+
+    sum = 0
+
+    for key in counts:
+        sum += counts[key]
+
+    return sum
+          
+
+    # for char in s1:
+    #     result.append(char)
+
+    # for char in s2:
+    #     if char in result:
+    #         result.remove(char)
+
+
+res = how_many_changes_v("aab", "abb")
+print(res)
