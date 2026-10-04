@@ -38,4 +38,34 @@ class Solution:
 
         return dummy.next
 
+"""3. Longest Substring Without Repeating Characters"""
+"""
+s = "abcabcbb"
+op = 3
 
+bcaabcbb; seen = (bca)
+ ^
+   ^
+
+- sliding window
+- left pointer: shrink the window when there's a duplicate char
+- right pointer: expand the window
+- store seen characters
+- keep count of the window size
+"""
+def longest_substring(s: str) -> int:
+    left = 0
+    max_window = 0
+    seen = set()
+
+    for right in range(len(s)):
+        while s[right] in seen:
+            seen.remove(s[left])
+            left += 1
+
+        seen.add(s[right])
+
+        window = right - left + 1
+        max_window = max(max_window, window)
+
+    return max_window
